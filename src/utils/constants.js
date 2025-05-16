@@ -1,0 +1,1 @@
+export const headerUrl="https://img.freepik.com/free-vector/ecofood-logo-template_1195-33.jpg?semt=ais_hybrid&w=740"
