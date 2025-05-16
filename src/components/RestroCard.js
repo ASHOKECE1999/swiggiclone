@@ -5,7 +5,7 @@ const RestroCard = (props) => {
   console.log(id)
   return (
     <Link to={`/restorents/${id}`}>
-    <div className="res-card">
+    <div className="w-[300] bg-gray-200 rounded-lg border-3 m-4 h-[350] flex flex-col items-center justify-between hover:bg-gray-700 hover:text-white p-9">
        
       <div
         style={{
