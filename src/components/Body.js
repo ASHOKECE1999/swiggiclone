@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import RestroCard from "./RestroCard"
 import ShimmerUI from "./ShimmerUI"
 import useOnlineCheck from "../utils/useOnlineCheck"
+import LogContext from "../utils/UserContext"
+
 const Body=()=>{
     const [data,dataSetter]=useState([])
     const isOnline=useOnlineCheck()

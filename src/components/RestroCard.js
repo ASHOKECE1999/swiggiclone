@@ -1,7 +1,16 @@
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import LogContext from "../utils/UserContext";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 const RestroCard = (props) => {
   const { data } = props;
   const { name, phone, username, website ,id} = data;
+  const dispatch=useDispatch()
+  const {logedInUser}=useContext(LogContext)
+  const addHandler=(data)=>{
+    dispatch(addItem(data))
+  }
   console.log(id)
   return (
     <Link to={`/restorents/${id}`}>
@@ -19,7 +28,8 @@ const RestroCard = (props) => {
       <h1>{username}</h1>
       <h3>{phone}</h3>
       <h1>{website}</h1>
-     
+      <h1>{logedInUser}</h1>
+     <button className="bg-black text-white p-2" onClick={()=>addHandler(data)}>addItem</button>
     </div>
     </Link>
   );
